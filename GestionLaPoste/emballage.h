@@ -1,26 +1,31 @@
 #ifndef EMBALLAGE_H
 #define EMBALLAGE_H
 
+#include <iostream>
 #include <string>
 
 using namespace std;
-
 
 class Emballage
 {
 private:
     string format;
-    int resistanceMax;
+    int resistance;
     int longueur;
     int largeur;
-    int stock;
     int hauteur;
+    int stock;
 
 public:
-    Emballage(string format, int resistanceMax, int Longueur, int largeur, int hauteur = 0);
+    Emballage(string _format, int _resistance, int _longueur, int _largeur, int _hauteur = 0);
     ~Emballage();
-    void Visualiser();
 
+    void Visualiser();
+    float CalculerVolume();
+
+    bool operator<(Emballage &autre);
+    bool operator==(Emballage &autre);
+    operator float();
 };
 
 #endif // EMBALLAGE_H
