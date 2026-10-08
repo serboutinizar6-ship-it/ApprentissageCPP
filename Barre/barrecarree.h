@@ -7,7 +7,7 @@ class BarreCarree
 private:
     float cote;
 
-public:
+public:  
     BarreCarree(const string &_reference, const int &_longueur, const int &_densite, const string &_nom);
 
     float CalculerSection();
